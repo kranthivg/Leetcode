@@ -1,4 +1,4 @@
-// Used 2 pointer approach on the sorted input.
+// Used 2 pointer approach on the sorted input
 var twoSum = function (numbers, target) {
   let left = 0,
     right = numbers.length - 1
