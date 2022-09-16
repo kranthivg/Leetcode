@@ -21,3 +21,14 @@ var findKthPositive = function (arr, k) {
     }
   }
 }
+// Binary Search Approach O(logN)
+var findKthPositive = function (arr, k) {
+  let left = 0,
+    right = arr.length
+  while (left < right) {
+    let mid = left + Math.floor((right - left) / 2)
+    if (arr[mid] - mid - 1 >= k) right = mid
+    else left = mid + 1
+  }
+  return left + k
+}
